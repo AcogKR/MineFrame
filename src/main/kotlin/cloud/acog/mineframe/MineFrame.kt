@@ -18,6 +18,7 @@ class MineFrame : JavaPlugin() {
     override fun onEnable() {
         inst = this
         listOf(
+            "This Plugin is Acog Plugin Support Library",
             "Please contact me if there is an error in the plugin",
             "Discord : Acog#5030, Telegram : @Acogkr"
         ).forEach(logger::info)
