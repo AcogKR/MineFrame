@@ -1,4 +1,1 @@
-#MineFrame
-
-> This plugin is a plugin for Acog's personal library and
-> is used in the library for all plugins developed by Acog.
+[![License](https://img.shields.io/github/license/EntryPointKR/Spigradle.svg)](https://github.com/EntryPointKR/Spigradle/blob/master/LICENSE)

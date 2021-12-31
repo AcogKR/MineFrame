@@ -11,4 +11,12 @@ abstract class CommandCreator : CommandExecutor {
     }
 
     abstract fun execute(sender: CommandSender, command: Command, label: String, args: Array<out String>)
+
+    fun CommandCreator.getArg(index: Int, error: String) : String? {
+        return null
+    }
+
+    fun String?.toSend(message: String) {
+
+    }
 }
