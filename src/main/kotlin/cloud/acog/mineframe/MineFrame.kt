@@ -24,3 +24,35 @@ class MineFrame : JavaPlugin() {
         ).forEach(logger::info)
     }
 }
+
+/*
+fun convertItemString(item: ItemStack) : String{
+    var outputStream: ByteArrayOutputStream? = null
+    var dataOutput: BukkitObjectOutputStream?
+
+    runCatching {
+        outputStream = ByteArrayOutputStream()
+        dataOutput = BukkitObjectOutputStream(outputStream)
+        dataOutput!!.writeObject(item)
+        dataOutput!!.close()
+    }.onFailure {
+            e -> e.printStackTrace()
+    }
+    return Base64Coder.encodeLines(outputStream!!.toByteArray())
+}
+
+fun convertStringItem(data: String) : ItemStack {
+    var inputStream: ByteArrayInputStream?
+    var dataInput: BukkitObjectInputStream?
+    var item = item(Material.AIR)
+
+    runCatching {
+        inputStream = ByteArrayInputStream(Base64Coder.decodeLines(data))
+        dataInput = BukkitObjectInputStream(inputStream)
+        item = dataInput!!.readObject() as ItemStack
+    }.onFailure {
+            e -> e.printStackTrace()
+    }
+    return item
+}
+*/

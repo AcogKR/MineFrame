@@ -3,17 +3,18 @@ import kr.entree.spigradle.kotlin.spigotmc
 
 plugins {
     kotlin("jvm") version "1.5.10"
+    `maven-publish`
     id("kr.entree.spigradle") version "2.2.4"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "cloud.acog"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 tasks.compileJava.get().options.encoding = "UTF-8"
 
 repositories {
-    mavenCentral()
+    mavenLocal()
     spigotmc()
 }
 
@@ -46,6 +47,20 @@ spigot {
         create("mineframe.manager") {
             description = "MineFrame manager permission"
             defaults = "op"
+        }
+    }
+}
+
+subprojects {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "cloud.acog"
+                artifactId = "mineframe"
+                version = "1.0"
+
+                from(components["java"])
+            }
         }
     }
 }
